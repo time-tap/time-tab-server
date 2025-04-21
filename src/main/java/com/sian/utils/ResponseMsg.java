@@ -11,14 +11,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ResponseMsg {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
-	
+
 	private AppCode result = AppCode.FAIL;
 	private HashMap<String, Object> data = new HashMap<>();
 	private String msg;
 
 	/**
 	 * 결과 코드 설정
-	 * @param result	AppCode
+	 * 
+	 * @param result AppCode
 	 */
 	public void setResult(AppCode result) {
 		this.result = result;
@@ -26,10 +27,11 @@ public class ResponseMsg {
 
 	/**
 	 * Data 추가
-	 * @param key		String
-	 * @param data		Object
+	 * 
+	 * @param key  String
+	 * @param data Object
 	 */
-	public void setData(String key, Object data) {		
+	public void setData(String key, Object data) {
 		this.data.put(key, data);
 	}
 
@@ -48,30 +50,29 @@ public class ResponseMsg {
 	public Object getData() {
 		return data;
 	}
-		
+
 	/**
 	 * Data를 JSON String 형태로 변환
+	 * 
 	 * @return
 	 */
-	public String send(){
+	public String send() {
 		String sendMsg = null;
 		try {
-			if(data.size() == 0) {
+			if (data.size() == 0) {
 				data = null;
-			}			
-			
+			}
+
 			ObjectMapper objectMapper = new ObjectMapper();
 			objectMapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
 			sendMsg = objectMapper.writeValueAsString(this);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 		logger.info("SEND : " + sendMsg);
-		
+
 		return sendMsg;
 	}
-	
-	
-	
+
 }

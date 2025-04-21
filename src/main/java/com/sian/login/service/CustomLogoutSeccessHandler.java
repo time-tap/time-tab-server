@@ -11,16 +11,17 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomLogoutSeccessHandler implements LogoutSuccessHandler {
-    
+
 	@Override
-	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
+	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+			throws IOException {
 
 		response.setStatus(HttpServletResponse.SC_OK);
-        response.setContentType("application/json;charset=UTF-8");
+		response.setContentType("application/json;charset=UTF-8");
 
-        String result = "{ \"message\": \"로그아웃 성공\", \"code\": 200 }";
-        response.getWriter().write(result);
-		
+		String result = "{ \"message\": \"로그아웃 성공\", \"code\": 200 }";
+		response.getWriter().write(result);
+
 	}
-	
+
 }

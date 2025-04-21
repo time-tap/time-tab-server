@@ -29,8 +29,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sian.login.mapper.LoginMapper;
 import com.sian.login.vo.UserLoginVo;
 
-
-
 @Component
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
@@ -47,7 +45,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 	@Autowired
 	private LoginMapper authMapper;
 
-	public LoginSuccessHandler(){
+	public LoginSuccessHandler() {
 
 		targetUrlParameter = "";
 		defaultUrl = "/";
@@ -78,100 +76,100 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 		this.useReferer = useReferer;
 	}
 
-    @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-                                        Authentication authentication) throws IOException {
-    	// 유저 정보 조회
-    	UserLoginVo user = (UserLoginVo) authentication.getPrincipal();
-    	
-    	// 성공 결과 저장
-    	Map<String, Object> result = new HashMap<>();
-    	result.put("message", "로그인 성공");
-    	result.put("code", 200);
-    	
-    	// 유저 정보 생성
-    	Map<String, Object> userMap = new HashMap<>();
-    	userMap.put("userIdx", user.getUserIdx());
-    	userMap.put("userId", user.getUsername());
-    	userMap.put("name", user.getUserNm());
-    	
-    	// 유저 정보 저장
-    	result.put("user", userMap);
+	@Override
+	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+			Authentication authentication) throws IOException {
+		// 유저 정보 조회
+		UserLoginVo user = (UserLoginVo) authentication.getPrincipal();
 
-    	ObjectMapper mapper = new ObjectMapper();
-    	String json = mapper.writeValueAsString(result);
+		// 성공 결과 저장
+		Map<String, Object> result = new HashMap<>();
+		result.put("message", "로그인 성공");
+		result.put("code", 200);
 
-    	logger.info("로그인 응답 JSON: " + json);
+		// 유저 정보 생성
+		Map<String, Object> userMap = new HashMap<>();
+		userMap.put("userIdx", user.getUserIdx());
+		userMap.put("userId", user.getUsername());
+		userMap.put("name", user.getUserNm());
 
-    	response.setStatus(HttpServletResponse.SC_OK);
-    	response.setContentType("application/json;charset=UTF-8");
-    	response.getWriter().write(json);
+		// 유저 정보 저장
+		result.put("user", userMap);
 
-    }
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writeValueAsString(result);
+
+		logger.info("로그인 응답 JSON: " + json);
+
+		response.setStatus(HttpServletResponse.SC_OK);
+		response.setContentType("application/json;charset=UTF-8");
+		response.getWriter().write(json);
+
+	}
 
 	private void clearAuthenticationAttributes(HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession(false);
 
-        if (session == null) {
-            return;
-        }
+		if (session == null) {
+			return;
+		}
 
-        session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
-    }
+		session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+	}
 
-	private String useTargetUrl(HttpServletRequest request, HttpServletResponse response) throws IOException{
+	private String useTargetUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		SavedRequest savedRequest = requestCache.getRequest(request, response);
-		if(savedRequest != null){
+		if (savedRequest != null) {
 			requestCache.removeRequest(request, response);
 		}
 		String targetUrl = request.getParameter(targetUrlParameter);
-		//redirectStrategy.sendRedirect(request, response, targetUrl);
+		// redirectStrategy.sendRedirect(request, response, targetUrl);
 
 		return targetUrl;
 	}
 
-	private String useSessionUrl(HttpServletRequest request, HttpServletResponse response) throws IOException{
+	private String useSessionUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		SavedRequest savedRequest = requestCache.getRequest(request, response);
 		String targetUrl = savedRequest.getRedirectUrl();
-		//redirectStrategy.sendRedirect(request, response, targetUrl);
+		// redirectStrategy.sendRedirect(request, response, targetUrl);
 
 		return targetUrl;
 	}
 
-	private String useRefererUrl(HttpServletRequest request, HttpServletResponse response) throws IOException{
+	private String useRefererUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String targetUrl = request.getHeader("REFERER");
 		targetUrl = defaultUrl;
-		//redirectStrategy.sendRedirect(request, response, targetUrl);
+		// redirectStrategy.sendRedirect(request, response, targetUrl);
 
 		return targetUrl;
 	}
 
-	private String usePreUrl(HttpServletRequest request, HttpServletResponse response) throws IOException{
+	private String usePreUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String targetUrl = request.getHeader("PREPAGE");
-		//redirectStrategy.sendRedirect(request, response, targetUrl);
+		// redirectStrategy.sendRedirect(request, response, targetUrl);
 
 		return targetUrl;
 	}
 
-	private String useDefaultUrl(HttpServletRequest request, HttpServletResponse response) throws IOException{
-		//redirectStrategy.sendRedirect(request, response, defaultUrl);
+	private String useDefaultUrl(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		// redirectStrategy.sendRedirect(request, response, defaultUrl);
 		return defaultUrl;
 	}
 
-	private int decideRedirectStrategy(HttpServletRequest request, HttpServletResponse response){
+	private int decideRedirectStrategy(HttpServletRequest request, HttpServletResponse response) {
 		int result = 0;
 		SavedRequest savedRequest = requestCache.getRequest(request, response);
 
-		if(!"".equals(targetUrlParameter)){
+		if (!"".equals(targetUrlParameter)) {
 			String targetUrl = request.getParameter(targetUrlParameter);
-			if(StringUtils.hasText(targetUrl)){
+			if (StringUtils.hasText(targetUrl)) {
 				result = 1;
-			}else{
-				if(savedRequest != null){
+			} else {
+				if (savedRequest != null) {
 					result = 2;
-				}else{
+				} else {
 					String refererUrl = request.getHeader("REFERER");
-					if(useReferer && StringUtils.hasText(refererUrl)){
+					if (useReferer && StringUtils.hasText(refererUrl)) {
 						result = 3;
 					} else {
 						result = 0;
@@ -182,16 +180,16 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 			return result;
 		}
 
-		if(savedRequest != null){
+		if (savedRequest != null) {
 			result = 2;
 			return result;
 		}
 
 		String refererUrl = request.getHeader("REFERER");
-		if(useReferer && StringUtils.hasText(refererUrl)){
+		if (useReferer && StringUtils.hasText(refererUrl)) {
 			result = 3;
 			return result;
-		}else{
+		} else {
 			result = 0;
 		}
 

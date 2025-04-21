@@ -29,10 +29,10 @@ public class UserRestController {
 	/*
 	 * 이민웅 test 123123
 	 */
-	
+
 	@PostMapping("/signup")
 	public ResponseEntity<Map<String, Object>> signup(@RequestBody UserSignupVo userSignupVo) {
-		
+
 		// 입력값 누락 검사
 		if (userSignupVo.getUserId() == null || userSignupVo.getUserId().trim().isEmpty()
 				|| userSignupVo.getUserPw() == null || userSignupVo.getUserPw().trim().isEmpty()
@@ -44,17 +44,15 @@ public class UserRestController {
 			res.put("message", "필수 입력값이 누락되었어요.");
 			return ResponseEntity.badRequest().body(res);
 		}
-	
+
 		Map<String, Object> res = userService.signup(userSignupVo);
-		
+
 		int code = (int) res.get("code");
-		
-		return ResponseEntity.status(code == 200 ? HttpStatus.OK :
-									 code == 400 ? HttpStatus.BAD_REQUEST :
-									 code == 409 ? HttpStatus.CONFLICT :
-									 HttpStatus.INTERNAL_SERVER_ERROR).body(res);
+
+		return ResponseEntity.status(code == 200 ? HttpStatus.OK
+				: code == 400 ? HttpStatus.BAD_REQUEST
+						: code == 409 ? HttpStatus.CONFLICT : HttpStatus.INTERNAL_SERVER_ERROR)
+				.body(res);
 	}
-	
-	
-	
+
 }

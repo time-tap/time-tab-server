@@ -7,5 +7,5 @@ import com.sian.user.vo.UserSignupVo;
 public interface UserMapper {
 
 	public void signup(UserSignupVo userSignupVo);
-	
+
 }

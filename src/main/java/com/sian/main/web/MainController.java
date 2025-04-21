@@ -8,12 +8,11 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 public class MainController {
-	
+
 	// 루트 매핑
 	@GetMapping(value = "/")
 	public String root(Model model) throws Exception {
-	    return "home/home";
+		return "home/home";
 	}
-	
-}
 
+}

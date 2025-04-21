@@ -38,7 +38,7 @@ public class LoginService extends JdbcDaoImpl implements UserDetailsService {
 
 	@Autowired
 	private LoginMapper loginMapper;
-	
+
 	@Autowired
 	private AuthService authService;
 
@@ -60,7 +60,7 @@ public class LoginService extends JdbcDaoImpl implements UserDetailsService {
 			// 사용자 정보 담을 객체 생성
 			UserLoginVo userParam = new UserLoginVo();
 			userParam.setUserId(id);
-				
+
 			// DB에서 사용자 정보 조회
 			user = loginMapper.loginUser(userParam);
 
@@ -68,7 +68,7 @@ public class LoginService extends JdbcDaoImpl implements UserDetailsService {
 				logger.warn("사용자 정보를 찾을 수 없습니다: ID = " + id);
 				throw new UsernameNotFoundException("사용자 정보를 찾을 수 없습니다: ID = " + id);
 			}
-	        
+
 		} catch (Exception e) {
 			logger.error("로그인 처리 중 오류 발생: ID = " + id, e);
 		}
@@ -103,7 +103,7 @@ public class LoginService extends JdbcDaoImpl implements UserDetailsService {
 	 */
 	public List<GrantedAuthority> setUserAuthorities(UserLoginVo user) {
 		List<GrantedAuthority> dbAuths = new ArrayList<>(); // 권한 리스트 생성
-		
+
 //		String userIdx = user.getUserIdx(); // 사용자 인덱스
 //		
 //		String userTp = user.getUserTp(); // 사용자 타입

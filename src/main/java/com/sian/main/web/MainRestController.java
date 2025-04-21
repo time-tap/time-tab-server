@@ -18,5 +18,4 @@ public class MainRestController {
 
 	private final MainService mainService;
 
-
 }

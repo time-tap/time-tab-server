@@ -11,10 +11,9 @@ import org.slf4j.LoggerFactory;
 @RequiredArgsConstructor
 @Service()
 public class AuthService {
-    
-    private final AuthMapper authMapper;
-    
-    private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
-    
-    
+
+	private final AuthMapper authMapper;
+
+	private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
+
 }

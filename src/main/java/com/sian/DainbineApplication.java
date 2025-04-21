@@ -10,13 +10,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class DainbineApplication extends SpringBootServletInitializer {
 
-    public static void main(String[] args) {
-        SpringApplication.run(DainbineApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(DainbineApplication.class, args);
+	}
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(DainbineApplication.class);
-    }
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(DainbineApplication.class);
+	}
 
 }

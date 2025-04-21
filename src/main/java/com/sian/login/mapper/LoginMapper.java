@@ -5,7 +5,6 @@ import org.springframework.data.repository.query.Param;
 
 import com.sian.login.vo.UserLoginVo;
 
-
 @Mapper
 public interface LoginMapper {
 

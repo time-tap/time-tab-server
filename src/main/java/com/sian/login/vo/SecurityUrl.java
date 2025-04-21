@@ -12,16 +12,22 @@ public class SecurityUrl {
 	private String programNm;
 	private String userGroupIdx;
 	private String link;
-	
+
 	public HttpMethod getHttpMethod() {
 		HttpMethod method = HttpMethod.GET;
-		
+
 		switch (this.programTp) {
-		case "PRGTP004": method = HttpMethod.POST; break;
-		case "PRGTP005": method = HttpMethod.PUT; break;
-		case "PRGTP006": method = HttpMethod.DELETE; break;
+		case "PRGTP004":
+			method = HttpMethod.POST;
+			break;
+		case "PRGTP005":
+			method = HttpMethod.PUT;
+			break;
+		case "PRGTP006":
+			method = HttpMethod.DELETE;
+			break;
 		}
-		
+
 		return method;
 	}
 }
