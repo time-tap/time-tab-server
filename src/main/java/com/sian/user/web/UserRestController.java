@@ -27,7 +27,7 @@ public class UserRestController {
 	private final UserService userService;
 
 	/*
-	 * 이민웅
+	 * 이민웅 test
 	 */
 	
 	@PostMapping("/signup")
