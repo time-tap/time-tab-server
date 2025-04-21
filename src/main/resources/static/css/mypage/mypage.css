@@ -1,0 +1,139 @@
+#mypage-wrap {
+	z-index: 5000;
+	display: none; position : fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(77, 77, 77, 0.7);
+	position: fixed;
+}
+
+#mypage-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 818px;
+	height: 492px;
+	background-color: #FFFFFF;
+	border-radius: 12px;
+	padding: 30px;
+}
+
+#mypage-head {
+	width: 100%;
+	height: 40px;
+	font-size: 22px;
+	line-height: 39.7px;
+	letter-spacing: -0.44px;
+}
+
+#mypage-main {
+	width: 100%;
+	height: 262px;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.input-li {
+	height: 50px;
+	display: flex;
+}
+
+.input-li-title {
+	width: 120px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.input-li-contents {
+	width: 638px;
+	display: flex;
+}
+
+#input-id, #input-nm, #input-tel {
+	width: 100%;
+}
+
+#input-pw-container, #input-pw-change-container {
+	width: 508px;
+	height: 100%;
+	display: flex;
+	gap: 10px;
+}
+
+#input-pw {
+	width: 508px;
+}
+
+#input-change-pw, #input-change-pw-check {
+	width: 249px;
+}
+
+#pw-change-btn {
+	width: 120px;
+	height: 50px;
+	margin-left: 10px;
+	border: 1px solid #3578F6;
+	border-radius: 8px;
+}
+
+#pw-change-btn span {
+	font-size: 14px;
+	line-height: 19.07px;
+	color: #3578F6;
+}
+
+#input-tel, #input-change-pw, #input-change-pw-check {
+	border: 1px solid #D3D8E0;
+	background-color: #FFF;
+}
+
+.input-bar {
+	height: 100%;
+	background-color: #F6F6F9;
+	border-radius: 10px;
+	padding: 14.5px 20px;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.56px;
+	color: #8A8A8D;
+}
+
+.input-bar::placeholder {
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.56px;
+	color: #8A8A8D;
+}
+
+#mypage-btn-container {
+	width: 100%;
+	height: 50px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.mypage-btn {
+	width: 260px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.mypage-btn span {
+	font-size: 14px;
+	line-height: 19.07px;
+}
+
+#mypage-cancle-btn {
+	border: 1px solid #3578F6;
+}
+
+#mypage-all-change-btn {
+	background-color: #3578F6;
+}

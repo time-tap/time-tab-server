@@ -1,0 +1,62 @@
+#month-picker-popup {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	padding: 12px;
+	width: 200px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 연도 셀렉트 박스 */
+#month-picker-popup select {
+	width: 100%;
+	padding: 6px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border-color 0.2s;
+}
+
+/* 포커스 시 포인트 색상 적용 */
+#month-picker-popup select:focus {
+	outline: none;
+	border-color: #3578F6;
+	box-shadow: 0 0 0 2px rgba(53, 120, 246, 0.2);
+}
+
+/* 월 버튼 영역 */
+#popup-month-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+}
+
+/* 월 버튼 기본 상태 */
+.month-btn {
+	padding: 8px 0;
+	text-align: center;
+	font-size: 13px;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Hover 시 포인트 색상 적용 */
+.month-btn:hover {
+	background-color: #3578F6;
+	color: #fff;
+	border-color: #3578F6;
+}
+
+/* 선택된 버튼 강조용 (선택 후 클래스 추가 시 활용 가능) */
+.month-btn.selected {
+	background-color: #3578F6;
+	color: #fff;
+	border-color: #3578F6;
+}

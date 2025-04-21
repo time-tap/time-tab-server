@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+.back-btn {
+	margin-right: 10px;
+	display: flex;
+	gap: 10px;
+}
+
+.back-btn-text {
+	font-size: 26px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+#section1, #section2{
+	background-color: #FFF;
+	border-radius: 12px;
+	margin-top: 20px;
+	width: 1120px;
+	padding: 20px 30px;
+}
+
+#section1 {
+	min-height: 150px;
+	display: flex;
+}
+
+.title-container {
+	width: 100%;
+	min-height: 110px;
+}
+
+.title-container-head {
+	width: 100%;
+	height: 25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-container-head-left {
+	font-weight: 700;
+}
+
+.title-container-main {
+	width: 100%;
+	margin-top: 10px;
+	border-top: 1px solid #D3D8E0;
+	height: 75px;
+}
+
+.title {
+	width: 100%;
+	height: 100%;
+}
+
+#section2 {
+	height: 710px;
+}
+
+.content-head {
+	height: 25px;
+	font-weight: 700;
+}
+
+.content-main {
+	width: 100%;
+	height: 510px;
+	margin-top: 10px;
+	border-top: 1px solid #D3D8E0;
+	padding-top: 10px;
+}
+
+#editorTxt {
+	display: flex;
+	width: 99.5%;
+	height: 100%;
+}
+
+.btn-group-container {
+	margin-top: 60px;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: right;
+	gap: 10px;
+}
+
+.btn {
+	width: 100px;
+	height: 50px;
+	border-radius: 8px;
+}
+
+.btn span {
+	font-size: 16px;
+    line-height: 21.79px;
+}
+
+#cancle-btn {
+	border: 1px solid #3578F6;
+}
+
+#create-btn {
+    background-color: #3578F6;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sian.user.mapper.UserMapper">
+	
+	<!-- 회원가입 -->
+	<insert id="signup">
+		INSERT INTO
+			tb_user(
+				user_idx,
+				user_id,
+				user_pw,
+				user_nm,
+				user_tel,
+				user_position,
+				status_cd
+			)
+		VALUES(
+			FN_GET_KEY('US'),
+			#{userId},
+			#{userPw},
+			#{userNm},
+			#{userTel},
+			#{userPosition},
+			'STTCD001'
+		)
+	</insert>
+	
+</mapper>

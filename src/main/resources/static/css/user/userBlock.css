@@ -1,0 +1,544 @@
+#section1 {
+	width: 100%;
+	padding: 20px 30px;
+	margin-top: 20px;
+	border-radius: 12px;
+	background-color: #FFF;
+	display: flex;
+	justify-content: space-between;
+}
+
+#search-container {
+	width: 723px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.search-li {
+	width: 100%;
+	height: 34px;
+	display: flex;
+}
+
+.search-title {
+	width: 120px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.search-content {
+	width: 593px;
+	height: 100%;
+	margin-left: 10px;
+	display: flex;
+}
+
+.search-content.type {
+	gap: 20px;
+}
+
+.search-content.status {
+	gap: 20px;
+}
+
+#search-input {
+	width: 100%;
+	height: 100%;
+	background-color: #F6F6F9;
+	border-radius: 10px;
+	padding: 6.5px 20px;
+	display: flex;
+	align-items: center;
+}
+
+#search-input::placeholder {
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.56px;
+	color: #8A8A8D;
+}
+
+.search-content.date {
+	gap: 10px;
+}
+
+.date-li {
+	height: 100%;
+}
+
+.date-btn, .date-detail-label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #D3D8E0;
+	border-radius: 5px;
+	color: #8A8A8D;
+	font-size: 14px;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.date-btn span {
+	color: #8A8A8D;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.date-btn.select, .date-detail-label.select {
+	border: none;
+	background-color: #3578F6;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+
+.date-btn.select span {
+	border: none;
+	background-color: #3578F6;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+
+.date-li.all, .date-li.today {
+	width: 54px;
+}
+
+.date-li.week, .date-li.month {
+	width: 62px;
+}
+
+.date-li.detail {
+	width: 321px;
+}
+
+.type-li {
+	height: 100%;
+}
+
+.type-label, .type-all-label {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.type-label::before, .type-all-label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-image: url('/img/un-checked-20.svg'); /* 이미지 경로 */
+	background-size: cover; /* 이미지를 태그에 맞게 조정 */
+	background-repeat: no-repeat; /* 반복 방지 */
+	background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.type:checked+.type-label::before, .type-all:checked+.type-all-label::before
+	{
+	background-image: url('/img/checked-20.svg'); /* 체크된 상태의 이미지 경로 */
+}
+
+.type-label-text {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.status-li {
+	height: 100%;
+}
+
+.status-label, .status-all-label {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.status-label::before, .status-all-label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-image: url('/img/o-un-checked.svg'); /* 이미지 경로 */
+	background-size: cover; /* 이미지를 태그에 맞게 조정 */
+	background-repeat: no-repeat; /* 반복 방지 */
+	background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.status:checked+.status-label::before, .status-all:checked+.status-all-label::before
+	{
+	background-image: url('/img/o-checked.svg'); /* 체크된 상태의 이미지 경로 */
+}
+
+.status-label-text {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+#search-reset-container {
+	width: 170px;
+	border-left: 1px solid #D3D8E0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	align-items: end;
+}
+
+#search-btn, #reset-btn {
+	width: 140px;
+	height: 40px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 19.07px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+#search-btn {
+	background-color: #3578F6;
+	color: #FFF;
+}
+
+#reset-btn {
+	background-color: #FFFFFF;
+	border: 1px solid #D3D8E0;
+	color: #36353A;
+}
+
+#section2 {
+	width: 100%;
+	background-color: #FFF;
+	border-radius: 12px;
+	margin-top: 20px;
+	padding: 20px 30px;
+}
+
+#section2-head {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#count-container {
+	width: 57px;
+	height: 100%;
+	line-height: 30px;
+	color: #36353A;
+	display: flex;
+	align-items: center;
+}
+
+#section2-head-right {
+	display: flex;
+	gap: 10px;
+}
+
+#all-btn-container {
+	display: flex;
+	gap: 10px;
+	
+}
+
+.all-btn {
+	width: 80px;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px solid #D3D8E0;
+}
+
+.all-btn span {
+	font-size: 14px;
+	line-height: 19.07px;
+}
+
+
+#section2-btn-container {
+	position: relative;
+	display: flex;
+	width: 100px;
+	height: 100%;
+	display: flex;
+}
+
+#count-list-btn {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #D3D8E0;
+	border-radius: 5px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #36353A;
+	padding: 0 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #D3D8E0;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+.count-list-container {
+	z-index: 2000;
+	position: absolute;
+	width: 100px;
+	top: 40px;
+	border: 1px solid #D3D8E0;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding: 5px;
+	display: none;
+}
+
+.count-list-container.open {
+	display: block;
+}
+
+.count-li {
+	width: 100%;
+	height: 30px;
+	display: flex;
+}
+
+.count-li label {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.count-li label:hover {
+	background-color: #F6F6F9;
+	font-weight: 700;
+}
+
+#result-wrap {
+	margin-top: 20px;
+	width: 1060px;
+	display: flex;
+	overflow-x: auto;
+	border-radius: 5px;
+	border: 1px solid #D3D8E0;
+	box-sizing: content-box;
+}
+
+#result-container {
+	font-size: 12px;
+	line-height: 30px;
+}
+
+#result-head div, .result-body-raw div {
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#result-head {
+	height: 48px;
+	display: flex;
+	border-bottom: 1px solid #D3D8E0;
+	border-radius: 5px 5px 0 0;
+	background-color: #F7F7F7;
+	padding: 16px 0;
+	font-weight: 700;
+}
+
+.result-head-column {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	border-right: 2px solid #D3D8E0;
+	padding: 0 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.result-head-column span{
+	width: 100%;
+	text-align: center;
+}
+
+.column2, .column5, .column6, .column7, .column8, .column9{
+	text-align: center;
+} 
+
+.column1, .column10 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.result-head-column:last-child {
+	border-right: none;
+}
+
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-color: transparent;
+    cursor: ew-resize;
+}
+
+#result-body {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+	max-height: 545px;
+    overflow-y: auto;
+    
+}
+
+.result-body-raw {
+	display: flex;
+	border-bottom: 1px solid #D3D8E0;
+	height: 40px;
+}
+
+.result-body-column {
+    padding: 5px 10px;
+}
+
+.result-body-column.column9 {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.result-body-column span {
+	height: 100%;
+	width: 100%;
+
+}
+
+.set-btn {
+	width: 70px;
+	height: 24px;
+	border-radius: 3px;
+	border: 1px solid #D3D8E0;
+}
+
+.set-btn span{
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16.34px;
+}
+
+input[type="checkbox"].user, input[type="checkbox"].user-all {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #D3D8E0;
+    border-radius: 0px;
+}
+
+#page-btn-container {
+	width: 100%;
+	height: 35px;
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+#start-page, #pre-page, #next-page, #end-page {
+	height: 100%;
+	position: relative; /* 가상 요소 배치에 필요 */
+	display: inline-block; /* 크기 조정 및 요소 정렬 */
+}
+
+#start-page, #end-page {
+	width: 33px;
+}
+
+#pre-page, #next-page {
+	width: 25.5px;
+}
+
+#start-page::before, #pre-page::before, #next-page::before, #end-page::before
+	{
+	content: ""; /* 가상 요소 활성화 */
+	display: block; /* 블록 요소로 설정 */
+	height: 35px; /* 세로 크기 */
+	background-size: cover; /* 배경 이미지가 요소 크기에 맞게 조정 */
+	background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+	position: absolute; /* 부모 요소를 기준으로 배치 */
+	top: 0; /* 부모 요소의 상단 정렬 */
+	left: 0; /* 부모 요소의 왼쪽 정렬 */
+}
+
+#start-page::before {
+	width: 33px;
+	background-image: url('/img/page-start.svg'); /* 배경 이미지 설정 */
+}
+
+#start-page.active::before {
+	background-image: url('/img/page-start-active.svg'); /* 배경 이미지 설정 */
+}
+
+#pre-page::before {
+	width: 25.5px;
+	background-image: url('/img/page-pre.svg'); /* 배경 이미지 설정 */
+}
+
+#pre-page.active::before {
+	background-image: url('/img/page-pre-active.svg'); /* 배경 이미지 설정 */
+}
+
+#next-page::before {
+	width: 25.5px;
+	background-image: url('/img/page-next.svg'); /* 배경 이미지 설정 */
+}
+
+#next-page.active::before {
+	background-image: url('/img/page-next-active.svg'); /* 배경 이미지 설정 */
+}
+
+#end-page::before {
+	width: 33px;
+	background-image: url('/img/page-end.svg'); /* 배경 이미지 설정 */
+}
+
+#end-page.active::before {
+	background-image: url('/img/page-end-active.svg'); /* 배경 이미지 설정 */
+}
+
+#page-num-container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.page-btn {
+	margin: 2.5px 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 21.79px;
+	color: #36353A;
+}
+
+.page-btn.active {
+	background-color: #3578F6;
+}
+
+.page-btn.active span {
+	color: #FFF;
+}

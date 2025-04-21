@@ -1,0 +1,208 @@
+#modal-industry-search-wrap {
+	z-index: 6000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(77, 77, 77, 0.7);
+	display: none;
+}
+
+#modal-industry-search-wrap.open {
+	display: flex;
+}
+
+#modal-industry-search-container {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 605px;
+    height: 635px;
+    border-radius: 16px;
+    padding: 30px;
+    background-color: #FFF;
+}
+
+.modal-industry-search-title {
+	width: 100%;
+    height: 40px;
+    font-size: 22px;
+    line-height: 39.7px;
+    letter-spacing: -0.44px;
+}
+
+.modal-industry-search-filter {
+	width: 100%;
+	height: 107px;
+	margin-top: 30px;
+}
+
+.modal-industry-search-keyword {
+	width: 100%;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #D3D8E0;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.modal-industry-search-keyword-input {
+	width: 473px;
+    height: 100%;
+    font-size: 16px;
+    line-height: 28.87px;
+    letter-spacing: -0.32px;
+}
+
+.modal-industry-search-keyword-btn {
+	border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-industry-search-detail-group {
+	width: 100%;
+    height: 36px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.modal-industry-search-detail {
+	width: 175px;
+	height: 100%;
+	z-index: 7000;
+}
+
+.modal-industry-search-detail-btn {
+	width: 100%;
+    height: 100%;
+    border: 1px solid #D3D8E0;
+    border-radius: 8px;
+    padding: 0 10.5px 0 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-industry-search-detail-btn span {
+	display: flex;
+    align-items: center;
+}
+
+.modal-industry-search-detail-text {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 128px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #8A8A8D;
+}
+
+.modal-industry-search-detail-text.select {
+	color: #36353A;
+}
+
+.modal-industry-search-detail-li-container {
+	width: 100%;
+	max-height: 300px;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	background-color: #FFF;
+	display: none;
+	flex-direction: column;
+	overflow: auto;
+	padding: 5px;
+}
+
+.modal-industry-search-detail-li {
+	width: 100%;
+    height: auto;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 8px;
+    padding: 0 14px;
+    text-align: left;
+}
+
+.modal-industry-search-detail-li:hover {
+	background-color: #F6F6F9;
+}
+
+.modal-industry-search-detail-li:hover span {
+	font-weight: 600;
+}
+
+.modal-industry-search-result {
+	width: 100%;
+	height: 29px;
+}
+
+.modal-industry-search-result-label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center; font-size : 16px;
+	line-height: 28.87px;
+	letter-spacing: -0.32px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.modal-industry-search-result-label::before {
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	background-image: url('/img/un-checked-o-24.svg'); /* 이미지 경로 */
+	background-size: cover; /* 이미지를 태그에 맞게 조정 */
+	background-repeat: no-repeat; /* 반복 방지 */
+	background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.modal-industry-search-result-input:checked+.modal-industry-search-result-label::before {
+	background-image: url('/img/checked-o-24.svg'); /* 체크된 상태의 이미지 경로 */
+}
+
+.modal-industry-search-result-container {
+	position: relative;
+    width: 100%;
+    height: 298px;
+    margin: 20px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 20px;
+}
+
+.modal-industry-search-btn-group {
+	width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-industry-search-btn {
+	width: 262.5px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.modal-industry-search-cancle-btn {
+	border: 1px solid #3578F6;
+}
+
+.modal-industry-search-active-btn {
+	background-color: #3578F6;
+}
+
+.modal-industry-search-cancle-btn span, .modal-industry-search-active-btn span {
+	font-size: 16px;
+    line-height: 21.79px;
+}

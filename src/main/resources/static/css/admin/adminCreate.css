@@ -1,0 +1,202 @@
+#main {
+	width: 100%;
+	margin-top: 20px;
+	padding: 30px;
+	border-radius: 12px;
+	background-color: #FFF
+}
+
+#input-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.input-li {
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+
+.input-title {
+	width: 120px;
+	height: 100%;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.input-title.auth-detail-title {
+	align-items: start;
+	padding-top: 10px;
+}
+
+.input-title.auth-detail-title span {
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+.input-box {
+	width: 940px;
+	height: 100%;
+	display: flex;
+	gap: 10px;
+}
+
+.input {
+	width: 100%;
+	height: 100%;
+	background-color: #F6F6F9;
+	border-radius: 10px;
+	padding: 14.5px 20px;
+}
+
+.input::placeholder {
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.04em;
+}
+
+.auth-radio-li {
+	width: 99px;
+	height: 100%;
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	padding: 8px 0;
+}
+
+.auth-radio-label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.auth-radio-label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url('/img/o-un-checked.svg'); /* 이미지 경로 */
+	background-size: cover; /* 이미지를 태그에 맞게 조정 */
+	background-repeat: no-repeat; /* 반복 방지 */
+	background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.auth-radio:checked+.auth-radio-label::before {
+	background-image: url('/img/o-checked.svg'); /* 체크된 상태의 이미지 경로 */
+}
+
+.auth-radio:checked+.auth-radio-label .auth-radio-text {
+	font-weight: 700;
+}
+
+#auth-detail-container {
+	width: 100%;
+	display: none;
+}
+
+#auth-detail-container.open {
+	display: flex;
+}
+
+#auth-checkbox-container {
+	width: 940px;
+	height: 100%;
+	padding: 0 10px;
+}
+
+.auth-checkbox {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #D3D8E0;
+	padding: 8px 20px;
+	display: flex;
+	gap: 20px;
+}
+
+.check-li {
+	width: 120px;
+	height: 34px;
+	padding: 2px 0;
+}
+
+.check-li.menu-check-li {
+	padding: 0;
+}
+
+.checkbox-label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.checkbox-label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-image: url('/img/un-checked-20.svg'); /* 이미지 경로 */
+	background-size: cover; /* 이미지를 태그에 맞게 조정 */
+	background-repeat: no-repeat; /* 반복 방지 */
+	background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.auth-detail-checkbox:checked+.checkbox-label::before {
+	background-image: url('/img/checked-20.svg'); /* 체크된 상태의 이미지 경로 */
+}
+
+.auth-detail-checkbox:checked+.checkbox-label .checkbox-label-text {
+	font-weight: 700;	
+}
+
+.checkbox-label-text{
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.check-li-btn {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.check-li-btn.select span {
+	font-weight: 700;
+}
+
+.check-li-title {
+	width: 120px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #000;
+	margin: 2px 0;
+}
+
+.create-btn-container {
+	width: 100%;
+	height: 50px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.create-btn {
+	width: 260px;
+	height: 100%;
+	border-radius: 8px;
+	background-color: #3578F6;
+	font-size: 14px;
+	line-height: 19.07px;
+	padding: 15.5px 8px;
+}

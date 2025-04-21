@@ -1,0 +1,108 @@
+#modal-send-mail-wrap {
+	position: fixed;
+	z-index: 6000;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(77, 77, 77, 0.7);
+}
+
+#modal-send-mail-wrap.open {
+	display: flex;
+}
+
+#modal-send-mail-container {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 605px;
+    height: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    background-color: #FFF;
+}
+
+.modal-send-mail-head {
+	width: 100%;
+	height: 40px;
+}
+
+.modal-send-mail-head-text {
+	font-size: 22px;
+    line-height: 39.7px;
+    letter-spacing: -0.44px;
+}
+
+.modal-send-mail-main {
+	margin-top: 20px;
+	width: 100%;
+	height: 315px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.modal-send-mail-title, .modal-send-mail-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-send-mail-title-text, .modal-send-mail-content-text {
+	font-size: 16px;
+    line-height: 21.79px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-send-mail-title-input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #D3D8E0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.modal-send-mail-content-input {
+	width: 100%;
+	height: 179px;
+	border: 1px solid #D3D8E0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    line-height: 30px;
+    resize: none;
+}
+
+.modal-send-mail-btn-group {
+	margin-top: 15px;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal-send-mail-btn {
+	width: 262.5px;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.modal-send-mail-btn span {
+	font-size: 16px;
+    line-height: 21.79px;
+}
+
+.modal-send-mail-cancle-btn {
+	border: 1px solid #3578F6;
+}
+
+.modal-send-mail-active-btn {
+	background-color: #3578F6;
+}

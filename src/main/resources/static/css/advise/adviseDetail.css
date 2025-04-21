@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+.back-btn {
+	margin-right: 10px;
+	display: flex;
+	gap: 10px;
+}
+
+.back-btn-text {
+	font-size: 26px;
+	line-height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+#section1, #section2, #section3 {
+	background-color: #FFF;
+	border-radius: 12px;
+	margin-top: 20px;
+	width: 1120px;
+	padding: 20px 30px;
+}
+
+#section1 {
+	min-height: 240px;
+	display: flex;
+}
+
+.advise-title-container {
+	width: 890px;
+	min-height: 200px;
+	border-right: 1px solid #D3D8E0;
+	padding-right: 30px;
+}
+
+.advise-date-container {
+	display: flex;
+	width: 100%;
+	height: 25px;
+	gap: 10px;
+}
+
+.advise-date-title {
+	width: 49px;
+	height: 100%;
+	border: 1px solid #8A8A8D;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 25.27px;
+	letter-spacing: -0.28px;
+	color: #8A8A8D;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.advise-date {
+	font-size: 14px;
+	line-height: 25.27px;
+	letter-spacing: -0.28px;
+}
+
+.advise-title {
+	margin-top: 10px;
+	width: 100%;
+	min-height: 81px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 27px;
+	letter-spacing: -0.36px;
+}
+
+.advise-change-container {
+	width: 170px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0 10px 30px;
+}
+
+.advise-status-container {
+	width: 100%;
+	height: 88px;
+	display: flex;
+	flex-direction: column;
+}
+
+.advise-status-head {
+	height: 38px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+}
+
+.advise-status-main {
+	position: relative;
+	width: 100%;
+	height: 40px;
+}
+
+.advise-status-btn {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 14px;
+}
+
+.advise-status {
+	font-size: 14px;
+}
+
+.advise-status-li-container {
+	position: absolute;
+	z-index: 2000;
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	background-color: #FFF;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	padding: 8px;
+}
+
+.advise-status-li-container.open {
+	display: flex;
+}
+
+.advise-status-li {
+	width: 100%;
+	height: 36px;
+	border-radius: 8px;
+}
+
+.advise-status-li-text {
+	font-size: 14px;
+}
+
+.advise-status-li:hover {
+	background-color: #EEEEEF;
+}
+
+.advise-status-li:hover span {
+	font-weight: 600;
+}
+
+#advise-del-btn {
+	width: 100%;
+	height: 40px;
+	border-radius: 8px;
+	border: 1px solid #D3D8E0;
+}
+
+#advise-del-btn span{
+	font-size: 14px;
+	line-height: 27px;
+	letter-spacing: -0.28px;
+}
+
+#section2 {
+	height: 200px;
+	display: flex;
+	
+}
+
+.info-detail-container {
+	width: 50%;
+	height: 100%;
+}
+
+.info-detail-container.adviser {
+	border-right: 1px solid #D3D8E0;
+	padding-right: 30px;
+	
+}
+
+.info-detail-container.user {
+	padding-left: 30px;
+}
+
+.info-detail-head {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.info-detail-head-text {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.info-detail-main {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.info-detail-li {
+	height: 25px;
+	display: flex;
+	gap: 5px;
+}
+
+.info-detail-li-head {
+	width: 60px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.info-detail {
+	font-size: 14px;
+}
+
+.user-detail-btn {
+	width: 80px;
+	height: 100%;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+}
+
+.user-detail-btn span {
+	font-size: 14px;
+}
+
+.info-chat-head {
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #D3D8E0;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.info-chat-main {
+	height: 500px;
+	overflow: auto;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.info-chat-li-head {
+	display: flex;
+	gap: 10px;
+	height: 30px;
+}
+
+.info-chat-tp {
+	font-size: 16px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+}
+
+.info-chat-tp.adviser {
+	color: #3578F6;
+}
+
+.info-chat-date {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.info-chat {
+	font-size: 14px;
+	min-height: 30px;
+}

@@ -1,0 +1,138 @@
+#modal-user-detail-wrap {
+	z-index: 5000;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(77, 77, 77, 0.7);
+	justify-content: center;
+    overflow: auto;
+}
+
+#modal-user-detail-wrap.open {
+	display: flex;
+}
+
+#modal-user-detail-container-wrap {
+	position: absolute;
+	width: 820px;
+	padding: 50px 0;
+}
+
+#modal-user-detail-container {
+	width: 100%;
+	min-height: 740px;
+	padding: 40px;
+	background-color: #FFF;
+	border-radius: 24px;
+}
+
+#modal-user-detail-head {
+	width: 100%;
+	font-size: 22px;
+	line-height: 39.7px;
+	letter-spacing: -0.44px;
+}
+
+#modal-user-detail-main {
+	margin-top: 30px;
+    width: 100%;
+    min-height: 740px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;	
+}
+
+.modal-user-detail-li {
+	width: 100%;
+}
+
+.modal-user-detail-li-input-wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.modal-user-detail-li-title {
+	width: 100%;
+	height: 38px;
+	display: flex;
+	align-items: center;
+}
+
+.modal-user-detail-li-title.modal-add-btn {
+	height: 48px;
+	justify-content: space-between;
+}
+
+.modal-user-detail-li-title.modal-add-btn span {
+	height: 100%;
+    padding: 18px 0 8px 0;
+}
+
+.modal-user-detail-li-title-text {
+	font-size: 16px;
+	line-height: 21.79px;
+}
+
+.modal-user-detail-li-input {
+	display: flex;
+	gap: 10px;
+}
+
+.modal-user-detail-li-input input {
+	width: 100%;
+	height: 50px;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	padding: 10px 14px;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.modal-user-detail-li-input .modal-user-detail-tel,
+.modal-user-detail-li-input  .modal-user-detail-address,
+.modal-user-detail-li-input  .modal-user-detail-industry,
+.modal-user-detail-li-input  .modal-user-detail-job {
+	width: 630px;
+}
+
+.modal-user-detail-add-btn {
+	width: 100px;
+	height: 32px;
+	border-radius: 8px;
+	background-color: #3578F6;
+}
+
+.modal-user-detail-add-btn span {
+	font-size: 14px;
+	line-height: 19.06px;
+}
+
+.modal-user-detail-change-btn {
+	width: 100px;
+	height: 50px;	
+	border: 1px solid #3578F6;
+    border-radius: 8px;
+}
+
+.modal-user-detail-delete-btn {
+	width: 100px;
+	height: 50px;
+	border: 1px solid #FF6450;
+	border-radius: 8px;
+}
+
+#modal-user-detail-closed-btn {
+	width: 100%;
+	height: 50px;
+	background-color: #3578F6;
+	border-radius: 8px;
+}
+
+#modal-user-detail-closed-btn span {
+	font-size: 18px;
+	line-height: 24.52px;
+	color: #FFF;
+}

@@ -1,0 +1,231 @@
+#title {
+	justify-content: space-between;
+}
+
+#section1, #section2, #section3, #section4 {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 20px 30px;
+}
+
+#section1-2 {
+	margin-top: 20px;
+	width: 100%;
+	height: 240px;
+	display: flex;
+}
+
+#section1 {
+	width: 810px;
+	height: 240px;
+}
+
+#section1-title, #section2-title, #section3-title, #section4-title {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#section1-title-btn, #section3-title-btn, #section4-title-btn {
+	height: 100%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.excel-container {
+	display: flex;
+	gap: 10px;
+	height: 100%;
+	padding: 5px 0;
+}
+
+#month-calendar {
+	width: 100px;
+	height: 100%;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	background-color: #FFF;
+	text-align: center;
+	cursor: pointer;
+}
+
+#excel-btn {
+	width: 90px;
+	height: 100%;
+	border: 1px solid #D3D8E0;
+	border-radius: 8px;
+	background-color: #FFF;
+}
+
+#excel-btn span {
+	font-size: 16px;
+}
+
+#section1-contents {
+	width: 100%;
+	margin-top: 30px;
+	height: 140px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.section1-contents-li {
+	width: 171px;
+	height: 100%;
+	border-radius: 12px;
+	background-color: #F6F6F9;
+	padding: 10px 16px;
+}
+
+.section1-contents-title {
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.64px;
+	display: flex;
+	align-items: center;
+}
+
+.section-contents-stats {
+	width: 100%;
+	height: 66px;
+	margin-top: 20px;
+}
+
+.stats-container {
+	height: 33px;
+	display: flex;
+	align-items: center;
+}
+
+.stats-text {
+	width: 80px;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.64px;
+}
+
+.stats-num {
+	font-size: 22px;
+	line-height: 33px;
+}
+
+#section2 {
+	width: 290px;
+	height: 240px;
+	margin-left: 20px;
+}
+
+#section2-title {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+#section2-main {
+	width: 100%;
+	margin-top: 30px;
+	height: 140px;
+	display: flex;
+	flex-direction: column;
+	background-color: #F6F6F9;
+	border-radius: 12px;
+	padding: 20.5px 16px;
+}
+
+#section3 {
+	margin-top: 20px;
+	width: 100%;
+	height: 313px;
+}
+
+#section3-main {
+	width: 100%;
+	height: 213px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.section3-li {
+	width: 248.5px;
+	height: 100%;
+	background-color: #F6F6F9;
+	padding: 10px 16px;
+	border-radius: 12px;
+}
+
+.section3-li-title {
+	width: 100%;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: -0.56px;
+}
+
+.section-main-stats.section3-li-stats-container {
+	margin-top: 27px;
+	height: 132px;
+}
+
+#section4 {
+	margin-top: 20px;
+	width: 100%;
+	height: 337px;
+}
+
+#section4-filter-container {
+	height: 100%;
+	display: flex;
+}
+
+.section4-filter-btn {
+	width: 50px;
+	height: 30px;
+	font-size: 12px;
+	line-height: 30px;
+	background-color: #FFF;
+	border: 1px solid #D3D8E0;
+	margin-right: 5px;
+	border-radius: 4px;
+}
+
+#filter-detail {
+	width: 208px;
+	margin: 0;
+}
+
+.section4-filter-btn.select {
+	background-color: #36353A;
+}
+
+.section4-filter-btn.select span {
+	font-weight: 700;
+	color: #FFF;
+}
+
+#section4-main {
+	margin-top: 40px;
+	width: 100%;
+	height: 227px;
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.graph-container {
+	width: 510px;
+	height: 100%;
+}
+
+.graph-title {
+	display: flex;
+	flex-direction: column;
+}
